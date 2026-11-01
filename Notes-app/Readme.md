@@ -1,0 +1,3 @@
+# Local Storage Data Structure
+
+I store all notes as an array of objects in `localStorage`, with each note containing a unique ID, title, content, and last edited timestamp. Before saving, I convert the JavaScript array into a JSON string using `JSON.stringify()`, and when the application loads, I use `JSON.parse()` to convert it back into an array. This structure makes it easy to find, edit, delete, and search individual notes while keeping all note information together. After every create, edit, or delete operation, the updated array is saved back to `localStorage` so the data persists after refreshing the page.

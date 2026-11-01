@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background: #f1f5f9;
+
+    color: #1e293b;
+
+    padding: 40px 20px;
+}
+
+
+/* ================= APP ================= */
+
+.app {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    color: #6366f1;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.header h1 {
+    font-size: 45px;
+
+    margin-bottom: 5px;
+}
+
+.description {
+    color: #64748b;
+}
+
+
+/* ================= FORM ================= */
+
+.note-form-section {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 25px;
+}
+
+.note-form-section h2 {
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+
+.form-group input,
+.form-group textarea,
+#searchInput {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+#searchInput:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+.error-message {
+    display: block;
+
+    color: #dc2626;
+
+    font-size: 13px;
+
+    margin-top: 6px;
+
+    min-height: 18px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.form-buttons {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.form-buttons button {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+#saveButton {
+    background: #6366f1;
+
+    color: white;
+}
+
+
+#saveButton:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+.cancel-btn {
+    background: #e2e8f0;
+
+    color: #334155;
+}
+
+
+.cancel-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-section {
+    margin-bottom: 25px;
+}
+
+
+/* ================= NOTES ================= */
+
+.notes-section {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+.notes-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.notes-header h2 {
+    font-size: 25px;
+}
+
+
+#notesCount {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ================= NOTE CARDS ================= */
+
+.notes-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.note-card {
+    padding: 22px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.note-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.note-card h3 {
+    margin-bottom: 10px;
+
+    color: #1e293b;
+}
+
+
+.note-content {
+    color: #475569;
+
+    white-space: pre-wrap;
+
+    margin-bottom: 15px;
+
+    line-height: 1.6;
+}
+
+
+.note-date {
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.note-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.note-actions button {
+    padding: 8px 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+.edit-btn {
+    background: #e0e7ff;
+
+    color: #4338ca;
+}
+
+
+.delete-btn {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+.empty-message {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: #94a3b8;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+
+    .header h1 {
+        font-size: 35px;
+    }
+
+
+    .note-form-section,
+    .notes-section {
+        padding: 20px;
+    }
+
+
+    .notes-container {
+        grid-template-columns: 1fr;
+    }
+
+}
